@@ -1,8 +1,17 @@
 /**
  * @private
- * This shim allows us to use yml in typescript without the compiler complaining.
+ * This shim allows us to use vue components in typescript without the complier complaining.
+ */
+declare module "*.vue" {
+  const value: any;
+  export default value;
+}
+
+/**
+ * @private
+ * This shim allows us to use yml in typescript without the complier complaining.
  */
 declare module "*.yml" {
-  const value: any; // eslint-disable-line @typescript-eslint/no-explicit-any
+  const value: any;
   export default value;
 }

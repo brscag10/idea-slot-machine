@@ -1,1 +1,1 @@
-👉 https://github.com/__USERNAME__/__TITLE__/issues/<issue_number>
+👉 https://github.com/daniellacosse/idea-slot-machine/issues/<issue_number>

@@ -32,7 +32,7 @@
     "hideGenerator": true,
     "includeDeclarations": true,
     "mode": "file",
-    "name": "__DISPLAY_TITLE__",
+    "name": "Idea Slot Machine",
     "out": "documentation",
     "readme": "none",
     "theme": "markdown"
