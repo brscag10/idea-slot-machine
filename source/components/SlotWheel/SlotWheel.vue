@@ -15,8 +15,8 @@ import Vue from "vue";
 import Component from "vue-class-component";
 
 // TODO - imports
-import ShuffleQueue from "library/shuffle-queue";
-import randomIntFactory from "library/random-int-factory";
+import ShuffleQueue from "/library/ShuffleQueue";
+import randomIntFactory from "/library/randomIntFactory";
 
 import config from "configuration/app.config.yml";
 

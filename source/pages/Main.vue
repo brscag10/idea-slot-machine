@@ -9,10 +9,7 @@
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
-
-import randomIntFactory from "library/random-int-factory";
 import SlotWheel from "components/SlotWheel.vue";
-
 import config from "configuration/app.config.yml";
 
 @Component

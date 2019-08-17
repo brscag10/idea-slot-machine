@@ -4,7 +4,10 @@
     "url": "https://github.com/daniellacosse/idea-slot-machine/issues"
   },
   "dependencies": {
-    "consola": "^2.5.6"
+    "consola": "^2.5.6",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.1.0",
+    "vue-hot-reload-api": "^2.3.3"
   },
   "description": "generate ideas",
   "devDependencies": {
@@ -16,18 +19,23 @@
     "@types/sinon": "^7.0.10",
     "@typescript-eslint/eslint-plugin": "^1.5.0",
     "@typescript-eslint/parser": "^1.5.0",
+    "@vue/component-compiler-utils": "^3.0.0",
+    "babel-jest": "^24.7.1",
     "babel-plugin-convert-to-json": "^0.1.0",
     "babel-plugin-module-resolver": "3.2.0",
-    "babel-jest": "^24.7.1",
     "eslint": "~5.10.0",
     "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-vue": "^5.2.3",
     "jest": "^24.7.1",
     "parcel-bundler": "^1.12.2",
+    "parcel-plugin-eslint": "^1.0.7",
     "pre-commit": "^1.2.2",
     "sinon": "^7.2.7",
     "typedoc": "^0.14.2",
     "typedoc-plugin-markdown": "^1.1.13",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.3.3333",
+    "vue-eslint-parser": "^6.0.4",
+    "vue-template-compiler": "^2.6.10"
   },
   "homepage": "https://github.com/daniellacosse/idea-slot-machine#readme",
   "license": "MIT",
@@ -41,7 +49,7 @@
     "url": "git+https://github.com/daniellacosse/idea-slot-machine.git"
   },
   "scripts": {
-    "eslint": "./node_modules/eslint/bin/eslint",
+    "eslint": "./node_modules/eslint/bin/eslint.js",
     "jest": "./node_modules/jest/bin/jest.js",
     "make-lint": "make lint",
     "parcel": "./node_modules/parcel-bundler/bin/cli.js",
