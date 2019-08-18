@@ -7,16 +7,23 @@
 
 
 <script lang="ts">
-import Vue from "vue";
 import Component from "vue-class-component";
-import SlotWheel from "components/SlotWheel.vue";
+import Vue from "vue";
 import config from "configuration/app.config.yml";
 
 @Component
+/**
+ * Main, default page. contains the app.
+ */
 export default class Main extends Vue {
   isSpinning = false;
   slots = config.slots;
 
+  /**
+   * spins the slot machine
+   * 
+   * @returns {Promise<void>} promise that resolves once the slot machine is done spinning
+   */
   async spin(): Promise<void> {
     this.$set(this, "isSpinning", true);
 
