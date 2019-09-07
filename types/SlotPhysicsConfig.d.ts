@@ -3,3 +3,8 @@ interface SlotPhysicsConfig {
   finalTickInterval: Range<number>;
   frictionCoeffecient: number;
 }
+
+interface PhysicsFrame {
+  finalTickInterval: number;
+  nextTimeout: number;
+}

@@ -1,36 +1,52 @@
 <template>
   <article class="Main">
-    <slot-machine :slots="slots"></slot-machine>
-    <slot-lever :spinning="isSpinning" @click="spin"></slot-lever>
+    <slot-machine ref="slotMachine" :slots="slots" @done="stopSpinning"></slot-machine>
+    <slot-lever 
+      @pull="startSpinning" 
+      :isSpinning="isSpinning"
+    ></slot-lever>
   </article>
 </template>
 
 
 <script lang="ts">
 import Component from "vue-class-component";
+import SlotLever from "../components/SlotLever.vue";
+import SlotMachine from "../components/SlotMachine.vue";
 import Vue from "vue";
 import config from "configuration/app.config.yml";
 
-@Component
+@Component({
+  components: {
+    SlotLever,
+    SlotMachine
+  }
+})
 /**
  * Main, default page. contains the app.
  */
 export default class Main extends Vue {
-  isSpinning = false;
+  isSpinning: boolean = false;
   slots = config.slots;
 
   /**
    * spins the slot machine
    * 
-   * @returns {Promise<void>} promise that resolves once the slot machine is done spinning
+   * @returns {void}
    */
-  async spin(): Promise<void> {
-    this.$set(this, "isSpinning", true);
+  startSpinning() {
+    this.isSpinning = true;
 
-    // TODO - handle ref type
-    await this.$refs.slotMachine.roll();
+    (this.$refs.slotMachine as SlotMachine).spin();
+  }
 
-    this.$set(this, "isSpinning", false);
+  /**
+   * stops the slot machine
+   * 
+   * @returns {void}
+   */
+  stopSpinning() {
+    this.isSpinning = false;
   }
 }
 </script>

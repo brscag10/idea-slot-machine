@@ -1,10 +1,10 @@
-import SlotMachine from "./SlotMachine.vue";
+import SlotLever from "../SlotLever.vue";
 import centered from "@storybook/addon-centered";
 // import results from "../../../dist/.jest-test-results.json";
 import { storiesOf } from "@storybook/vue";
 // import { withTests } from "@storybook/addon-jest";
 
-storiesOf("SlotMachine", module)
+storiesOf("SlotLever", module)
   .addDecorator(centered)
   // .addDecorator(
   //   withTests({
@@ -14,10 +14,10 @@ storiesOf("SlotMachine", module)
   .add(
     "default",
     (): {} => ({
-      components: { SlotMachine },
-      template: `<slot-machine></slot-machine>`
+      components: { SlotLever },
+      template: `<slot-lever></slot-lever>`
     }),
     {
-      jest: ["SlotMachine.test.js"]
+      jest: ["SlotLever.test.js"]
     }
   );

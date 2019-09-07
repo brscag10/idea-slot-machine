@@ -8,7 +8,9 @@
   box-sizing: border-box;
 
   font-family: "HelveticaNeue", HelveticaNeue, Helvetica, sans-serif;
+}
 
+:root {
   /* variables */
   --max-supported-width: 1080px;
   --min-supported-width: 320px;

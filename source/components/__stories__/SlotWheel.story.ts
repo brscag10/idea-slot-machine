@@ -1,4 +1,4 @@
-import SlotWheel from "./SlotWheel.vue";
+import SlotWheel from "../SlotWheel.vue";
 import centered from "@storybook/addon-centered";
 // import results from "../../../dist/.jest-test-results.json";
 import { storiesOf } from "@storybook/vue";

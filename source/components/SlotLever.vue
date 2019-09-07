@@ -1,21 +1,19 @@
 <template>
-  <button
-    class="SlotLever"
-    @click="spin"
+  <button class="SlotLever" @click="() => this.$emit('pull')" 
     :disabled="isSpinning"
-  >{{ isSpinning ? "Spinning..." : "Spin!" }}</button>
+  >{{ text }}</button>
 </template>
 
 <script lang="ts">
 export default {
+  computed: {
+    text() {
+      return this.isSpinning ? "Spinning..." : "Spin!"
+    }
+  },
   props: {
     isSpinning: Boolean
   },
-  methods: {
-    spin() {
-      this.$emit("spin");
-    }
-  }
 };
 </script>
 

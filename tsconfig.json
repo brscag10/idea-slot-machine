@@ -7,6 +7,7 @@
     "lib": ["esnext", "dom", "scripthost"],
     "module": "es2015",
     "moduleResolution": "node",
+    "target": "es6",
     "outDir": ".make/dist",
     "removeComments": true,
     "resolveJsonModule": true,
