@@ -20,7 +20,7 @@ commands:
     description: "sets up our needed environment variables"
     steps:
       - run: |
-          echo ENV=circleci > .env
+          echo NODE_ENV=production > .env
 
   get_dependencies:
     description: "fetch all necessary dependencies"
@@ -33,14 +33,16 @@ commands:
             - v1-dependencies-{{ checksum "yarn.lock" }}
             - v1-dependencies-
 
-      - run: make yarn.lock
+      - run: |
+          git clone git@github.com:daniellacosse/typescript-buildfiles.git .buildfiles
+          make .make/yarn.lock
 
       - save_cache:
           paths:
             - .make
+            - .buildfiles
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
-
 jobs:
   build:
     executor: node

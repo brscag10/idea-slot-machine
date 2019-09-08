@@ -2,9 +2,11 @@ BUILDFILES_FOLDER=.buildfiles
 BUILDFILES_REPO=git@github.com:daniellacosse/typescript-buildfiles.git
 COMMANDS=$(BUILDFILES_FOLDER)/main.mk $(BUILDFILES_FOLDER)/commands/*.mk
 
-include $(COMMANDS)
+override PACKAGE_ENTRY_POINT=source/index.html
+override PACKAGE_BUILD=build/index.html
+override PACKAGE_TARGET=browser
 
-PACKAGE_ENTRY_POINT=source/index.html
+include $(COMMANDS)
 
 default: $(PROXY_FOLDER)
 	make $(PROJECT_DEPENDENCY_PROXY_TARGETS) ;\

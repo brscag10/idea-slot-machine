@@ -30,6 +30,7 @@
     "jest": "^24.7.1",
     "parcel-bundler": "^1.12.2",
     "pre-commit": "^1.2.2",
+    "serve": "^11.1.0",
     "sinon": "^7.2.7",
     "typedoc": "^0.14.2",
     "typedoc-plugin-markdown": "^1.1.13",
@@ -41,9 +42,6 @@
   "license": "MIT",
   "main": "build/index.js",
   "name": "@daniellacosse/idea-slot-machine",
-  "pre-commit": [
-    "make-lint"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/daniellacosse/idea-slot-machine.git"
@@ -51,7 +49,7 @@
   "scripts": {
     "eslint": "./node_modules/eslint/bin/eslint.js",
     "jest": "./node_modules/jest/bin/jest.js",
-    "make-lint": "make lint",
+    "serve": "./node_modules/.bin/serve",
     "parcel": "./node_modules/parcel-bundler/bin/cli.js",
     "typedoc": "./node_modules/.bin/typedoc"
   },
