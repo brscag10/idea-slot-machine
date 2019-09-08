@@ -31,7 +31,6 @@
     "now": "^16.2.0",
     "parcel-bundler": "^1.12.2",
     "pre-commit": "^1.2.2",
-    "serve": "^11.1.0",
     "sinon": "^7.2.7",
     "typedoc": "^0.14.2",
     "typedoc-plugin-markdown": "^1.1.13",
@@ -48,8 +47,6 @@
     "url": "git+https://github.com/daniellacosse/idea-slot-machine.git"
   },
   "scripts": {
-    "build": "make build/index.html",
-    "start": "yarn serve ./build",
     "eslint": "./node_modules/eslint/bin/eslint.js",
     "jest": "./node_modules/jest/bin/jest.js",
     "serve": "./node_modules/.bin/serve",
