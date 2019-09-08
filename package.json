@@ -49,7 +49,6 @@
   "scripts": {
     "eslint": "./node_modules/eslint/bin/eslint.js",
     "jest": "./node_modules/jest/bin/jest.js",
-    "serve": "./node_modules/.bin/serve",
     "now": "./node_modules/.bin/now",
     "parcel": "./node_modules/parcel-bundler/bin/cli.js",
     "typedoc": "./node_modules/.bin/typedoc"
