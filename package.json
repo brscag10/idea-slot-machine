@@ -28,6 +28,7 @@
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-vue": "^5.2.3",
     "jest": "^24.7.1",
+    "now": "^16.2.0",
     "parcel-bundler": "^1.12.2",
     "pre-commit": "^1.2.2",
     "serve": "^11.1.0",
@@ -47,9 +48,11 @@
     "url": "git+https://github.com/daniellacosse/idea-slot-machine.git"
   },
   "scripts": {
+    "start": "yarn serve ./build",
     "eslint": "./node_modules/eslint/bin/eslint.js",
     "jest": "./node_modules/jest/bin/jest.js",
     "serve": "./node_modules/.bin/serve",
+    "now": "./node_modules/.bin/now",
     "parcel": "./node_modules/parcel-bundler/bin/cli.js",
     "typedoc": "./node_modules/.bin/typedoc"
   },
