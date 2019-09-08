@@ -48,6 +48,7 @@
     "url": "git+https://github.com/daniellacosse/idea-slot-machine.git"
   },
   "scripts": {
+    "build": "make build/index.html",
     "start": "yarn serve ./build",
     "eslint": "./node_modules/eslint/bin/eslint.js",
     "jest": "./node_modules/jest/bin/jest.js",
