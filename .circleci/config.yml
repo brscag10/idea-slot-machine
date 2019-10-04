@@ -51,7 +51,7 @@ jobs:
     steps:
       - get_dependencies
 
-      - run: make
+      - run: make build/index.js
 
   lint:
     executor: node
