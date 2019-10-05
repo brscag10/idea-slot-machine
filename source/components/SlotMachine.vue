@@ -20,7 +20,7 @@ import Vue from "vue";
   },
   props: {
     slots: {
-      default: [],
+      default: () => [],
       type: Array
     }
   }

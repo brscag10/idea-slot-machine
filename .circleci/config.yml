@@ -34,6 +34,7 @@ commands:
             - v1-dependencies-
 
       - run: |
+          rm -rf .buildfiles
           git clone git@github.com:daniellacosse/typescript-buildfiles.git .buildfiles
           make .make/yarn.lock
 
@@ -50,7 +51,7 @@ jobs:
     steps:
       - get_dependencies
 
-      - run: make
+      - run: make build/index.html
 
   lint:
     executor: node
@@ -76,21 +77,17 @@ jobs:
 
       - run: make coverage
 
-  release_patch:
-    executor: node
-
-    steps:
-      - get_dependencies
-      - set_git_user
-
-      - run: |
-          set -e
-
-          git checkout $CIRCLE_BRANCH
-
-          # tag master with new version/docs and push
-          make release!
-          git push origin $CIRCLE_BRANCH --tags
+  # release_patch:
+  #   executor: node
+  #   steps:
+  #     - get_dependencies
+  #     - set_git_user
+  #     - run: |
+  #         set -e
+  #         git checkout $CIRCLE_BRANCH
+  #         # tag master with new version/docs and push
+  #         make release!
+  #         git push origin $CIRCLE_BRANCH --tags
 
 workflows:
   build:
@@ -115,9 +112,9 @@ workflows:
             branches:
               ignore:
                 - master
-  release:
-    jobs:
-      - release_patch:
-          filters:
-            branches:
-              only: master
+  # release:
+  #   jobs:
+  #     - release_patch:
+  #         filters:
+  #           branches:
+  #             only: master

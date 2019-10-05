@@ -1,4 +1,4 @@
-import randomIntFactory from "/library/randomIntFactory";
+import randomIntFactory from "./randomIntFactory";
 
 /**
  *
@@ -17,11 +17,7 @@ export default class ShuffleQueue<T> {
    * @param {T[]} items
    * @memberof ShuffleQueue
    */
-  public constructor(items: T[]) {
-    if (items.length < 2) {
-      throw new Error("you must have at least two items in the queue");
-    }
-
+  public constructor(items: T[] = []) {
     this.items = items;
 
     this._previousItem = null;

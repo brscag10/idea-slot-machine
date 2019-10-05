@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`passes a smoke test 1`] = `"<button data-server-rendered=\\"true\\" class=\\"SlotLever\\">Spin!</button>"`;
