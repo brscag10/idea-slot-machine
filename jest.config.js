@@ -4,7 +4,7 @@ module.exports = {
     "^.+\\.ts$": "babel-jest",
     "^.+\\.js$": "babel-jest"
   },
-  
+  coveragePathIgnorePatterns: ["<rootDir>/utilities/"],
   coverageThreshold: {
     global: {
       /*

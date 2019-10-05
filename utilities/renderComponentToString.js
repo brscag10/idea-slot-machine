@@ -8,20 +8,11 @@ import { createRenderer } from "vue-server-renderer";
  * @param {VueComponent} VueComponent the vue component we wish to render
  * @returns {Promise<string>} the rendered component string
  */
-export default async function renderComponentToString(VueComponent) {
+export default async function renderComponentToString(VueComponent, props = {}) {
   const renderer = createRenderer();
-  const v = new Vue({
-    el: document.createElement("div"),
-    render: h => h(VueComponent)
-  });
 
-  return new Promise((resolve, reject) => {
-    renderer.renderToString(v, (error, result) => {
-      if (error) {
-        reject(error);
-      }
+  const ComponentWithProps = Vue.extend(VueComponent);
+  const vm = new ComponentWithProps(props).$mount();
 
-      resolve(result);
-    });
-  });
+  return renderer.renderToString(vm);
 }
