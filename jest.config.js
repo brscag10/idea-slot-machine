@@ -1,4 +1,10 @@
 module.exports = {
+  transform: {
+    ".*\\.(vue)$": "vue-jest",
+    "^.+\\.ts$": "babel-jest",
+    "^.+\\.js$": "babel-jest"
+  },
+  
   coverageThreshold: {
     global: {
       /*

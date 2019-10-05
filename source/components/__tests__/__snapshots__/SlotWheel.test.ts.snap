@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`passes a smoke test 1`] = `"<section data-server-rendered=\\"true\\" class=\\"SlotWheel\\" style=\\"animation-duration:0ms;\\"><div class=\\"SlotWheel__value\\">???</div> <h2 class=\\"SlotWheel__name\\"></h2></section>"`;

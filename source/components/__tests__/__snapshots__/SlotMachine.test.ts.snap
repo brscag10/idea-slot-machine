@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`passes a smoke test 1`] = `"<section data-server-rendered=\\"true\\" class=\\"SlotMachine\\" style=\\"grid:auto / repeat(0, 1fr);\\"></section>"`;
