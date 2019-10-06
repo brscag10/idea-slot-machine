@@ -1,7 +1,0 @@
-version: "2"
-file-lines:
-  config:
-    threshold: 1000
-method-lines:
-  config:
-    threshold: 50

@@ -14,7 +14,7 @@ import Component from "vue-class-component";
 import SlotLever from "../components/SlotLever.vue";
 import SlotMachine from "../components/SlotMachine.vue";
 import Vue from "vue";
-import config from "configuration/app.config.yml";
+import config from "../../app.config.yml";
 
 @Component({
   components: {
