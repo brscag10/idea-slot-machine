@@ -11,8 +11,8 @@
 
 <script lang="ts">
 import Component from "vue-class-component";
-import SlotLever from "../components/SlotLever.vue";
-import SlotMachine from "../components/SlotMachine.vue";
+import SlotLever from "../../library/components/SlotLever.vue";
+import SlotMachine from "../../library/components/SlotMachine.vue";
 import Vue from "vue";
 import config from "../../app.config.yml";
 
@@ -58,7 +58,7 @@ export default class Main extends Vue {
   flex-direction: column;
 
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 
   width: 100vw;
   height: 100vh;
