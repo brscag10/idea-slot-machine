@@ -22,6 +22,8 @@ slots:
       - "social deception"
       - "legacy"
       - "combat"
+      - "tower defense"
+      - "infinite"
   - name: "theme"
     options:
       - "agriculture"
@@ -84,3 +86,4 @@ slots:
       - "tile placement"
       - "time limits"
       - "bartering"
+      - "king making"
