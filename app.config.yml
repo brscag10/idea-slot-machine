@@ -24,6 +24,7 @@ slots:
       - "combat"
       - "tower defense"
       - "infinite"
+      - "escape the room"
   - name: "theme"
     options:
       - "agriculture"
